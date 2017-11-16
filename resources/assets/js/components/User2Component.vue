@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Example Component</div>
+                    <div class="panel-heading">User 2. Auth error</div>
 
                     <div class="panel-body">
                         {{ user.name }} || {{ user.email }}
@@ -25,9 +25,7 @@
         mounted() {
             console.log('Component mounted.')
 
-            axios.get('api/user',{
-                headers: {'Authorization' : 'Bearer NfYNYBlKu4cLDmOB9DTQ1uiEU4a4JrEtsIar40Z1qcvo5U1GO9q0qTDYiowN' , 'HEADER1' : 'VALUE1'}
-            }).then( response => {
+            axios.get('api/user').then( response => {
                 this.user = response.data
             }).catch(error => {
                 console.log(error)

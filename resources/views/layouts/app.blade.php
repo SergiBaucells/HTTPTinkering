@@ -36,7 +36,10 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        &nbsp;<li><a href="/axios">User</a></li>
+                        &nbsp;<li><a href="/user2">User 2</a></li>
+                         <li><a href="/user3">User 3</a></li>
+                         <li><a href="/tokens">Tokens</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -15,8 +15,16 @@ use Illuminate\Http\Request;
 
 Route::get('/user', function (Request $request) {
     return [
-        'headers' => 'TODO HEADERS ENVIATS',
+        'headers' => ['X-CSRF-TOKEN' => $request->header('X-CSRF-TOKEN'), 'PROVA'=> $request->header('PROVA')],
         'name' => 'Pepe',
         'email' => 'pepe@pepe.com'
     ];
-});
+})->middleware('auth:api');
+
+Route::get('/passport/user', function (Request $request) {
+    return [
+        'headers' => ['X-CSRF-TOKEN' => $request->header('X-CSRF-TOKEN'), 'PROVA'=> $request->header('PROVA')],
+        'name' => 'Pepe',
+        'email' => 'pepe@pepe.com'
+    ];
+})->middleware('auth:api_passport');
