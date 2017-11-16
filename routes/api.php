@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
 Route::get('/user', function (Request $request) {
     return [
-        'headers' => //TODO headers enviats,
+        'headers' => 'TODO HEADERS ENVIATS',
         'name' => 'Pepe',
         'email' => 'pepe@pepe.com'
     ];
